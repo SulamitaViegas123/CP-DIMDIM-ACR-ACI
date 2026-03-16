@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+
+  db:
+    image: mysql:8
+    container_name: dimdim-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: dimdim
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  api:
+    build: .
+    container_name: dimdim-api
+    depends_on:
+      - db
+    ports:
+      - "8000:8000"

@@ -1,0 +1,31 @@
+# Projeto: DimDim --> containers
+
+🚀 API desenvolvida em FastAPI para gerenciamento de usuários e transações financeiras 🚀
+
+## Tecnologias
+- Python
+- FastAPI
+- MySQL
+- Docker
+- Azure Container Registry
+- Azure Container Instances
+
+## Endpoints
+
+### Users
+POST /users
+GET /users
+PUT /users/{id}
+DELETE /users/{id}
+
+### Transactions
+POST /transactions
+GET /transactions
+PUT /transactions/{id}
+DELETE /transactions/{id}
+
+## Banco de Dados
+
+Tabelas:
+- users
+- transactions
