@@ -29,3 +29,21 @@ DELETE /transactions/{id}
 Tabelas:
 - users
 - transactions
+
+# DimDim API
+
+## Como rodar
+
+1. Construir e subir containers:
+```bash
+docker-compose build
+docker-compose up -d
+# DimDim API
+
+Acesse a API no http://localhost:8000 ou pelo endpoint público na Azure.
+
+Endpoints disponíveis:
+
+/users → CRUD de usuários
+
+/transactions → CRUD de transações
